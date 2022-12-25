@@ -5,10 +5,10 @@ body {
   margin: 0;
   background-image: radial-gradient(
     circle,
-    #6600ff 0%,
-    #0066ff 28%,
-    #3333ff 32%,
-    #3366ff 100%
+    #829ef3 0%,
+    #72a4f4 28%,
+    #7575f3 32%,
+    #6a89e4 100%
   );
   padding: 10px 10px;
   color: #ffffff;
@@ -52,7 +52,7 @@ h2 {
 button {
   display: block;
   margin: 0 auto;
-  background: blue;
+  background: rgb(147, 147, 236);
   color: rgb(240, 173, 91);
   padding: 15px 10px;
   position: relative;
