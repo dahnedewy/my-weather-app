@@ -65,7 +65,7 @@ function displayWeather(response) {
     response.data.wind.speed
   );
   document.querySelector("#precipitation").innerHTML =
-    response.data.precipitation.value;
+    response.data.precipitation.inches;
 }
 function getCurrentTemp(city) {
   let apiKey = "d6c19fbec4ecf72cd2eb049393d9e359";
