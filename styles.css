@@ -115,10 +115,10 @@ button {
   top: -18px;
   color: white;
 }
-#fahrenheit {
+.fahrenheit {
   color: #ffffff;
 }
-#celsius {
+.celsius {
   color: #ffffff;
 }
 .weather_sunrise {
