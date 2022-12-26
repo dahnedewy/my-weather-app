@@ -123,11 +123,16 @@ button {
 .weather_sunrise {
   font-size: 20px;
   padding: 15px 10px;
+  position: relative;
+  top: -20px;
 }
 .weather_sunset {
   font-size: 20px;
   padding: 15px 10px;
+  position: relative;
+  top: -20px;
 }
+
 .weather_forecast {
   width: 100%;
   text-align: center;
