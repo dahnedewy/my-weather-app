@@ -47,10 +47,10 @@ function changeToCelsius(event) {
   let temp = document.querySelector(".temperature");
   temp.innerHTML = 19;
 }
-let fahrenheit = document.querySelector(".fahrenheit");
+let fahrenheit = document.querySelector("#fahrenheit");
 fahrenheit.addEventListener("click", changeToFahrenheit);
 
-let celsius = document.querySelector(".celsius");
+let celsius = document.querySelector("#celsius");
 celsius.addEventListener("click", changeToCelsius);
 
 function displayWeather(response) {
