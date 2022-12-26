@@ -29,7 +29,6 @@ h2 {
   padding: 10px 20px 20px 20px;
   border-radius: 10px;
   height: 100%;
-  width: 100%;
 }
 
 .search_form {
@@ -124,12 +123,10 @@ button {
 .weather_sunrise {
   font-size: 20px;
   padding: 15px 10px;
-  margin-bottom: auto;
 }
 .weather_sunset {
   font-size: 20px;
   padding: 15px 10px;
-  margin: auto;
 }
 .weather_forecast {
   width: 100%;
