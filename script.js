@@ -66,7 +66,14 @@ function displayWeather(response) {
   );
   document.querySelector("#precipitation").innerHTML =
     response.data.precipitation.inches;
+
+  let iconElement = document.querySelector(".weather_image");
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].image}@2x.png`
+  );
 }
+
 function getCurrentTemp(city) {
   let apiKey = "d6c19fbec4ecf72cd2eb049393d9e359";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;

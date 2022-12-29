@@ -160,7 +160,3 @@ button {
   width: calc(10% - 10px);
   flex-grow: 1;
 }
-img {
-  margin: 0 auto;
-  padding: 10px 2px 10px;
-}
