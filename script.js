@@ -40,12 +40,12 @@ form.addEventListener("submit", showLocation);
 function changeToFahrenheit(event) {
   event.preventDefault();
   let temp = document.querySelector(".temperature");
-  temp.innerHTML = 66;
+  temp.innerHTML = 60;
 }
 function changeToCelsius(event) {
   event.preventDefault();
   let temp = document.querySelector(".temperature");
-  temp.innerHTML = 19;
+  temp.innerHTML = 17;
 }
 let fahrenheit = document.querySelector("#fahrenheit_link");
 fahrenheit.addEventListener("click", changeToFahrenheit);
@@ -86,7 +86,7 @@ function search(event) {
 
 function getPosition(position) {
   let apiKey = "d6c19fbec4ecf72cd2eb049393d9e359";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=imperial`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayWeather);
 }
 
@@ -123,4 +123,4 @@ fahrenheitlink.addEventListener("click", displayfahrenheitTemperature);
 let celsiusLink = document.querySelector("#celsius_link");
 celsiusLink.addEventListener("click", displaycelsiusTemperature);
 
-getCurrentTemp("Harare");
+getCurrentTemp("Dallas");
