@@ -5,7 +5,7 @@ body {
   margin: 0;
   background-image: radial-gradient(
     circle,
-    #829ef3 0%,
+    #829ef3 10%,
     #72a4f4 28%,
     #7575f3 32%,
     #6a89e4 100%
@@ -23,7 +23,7 @@ h2 {
 }
 .weather {
   border: 1px solid black;
-  max-width: 800px;
+  max-width: 900px;
   margin: 30px auto;
   padding: 20px;
   border-radius: 5px;
@@ -105,19 +105,28 @@ button {
   font-weight: 600;
   align-self: center;
   text-align: center;
+  color: #ffffff;
 }
-.units {
+.weather_temperature .units {
   font-size: 30px;
   position: relative;
   top: -18px;
-  color: white;
-}
-#fahrenheit {
   color: #ffffff;
 }
-#celsius {
-  color: #ffffff;
+#fahrenheit_link {
+  text-decoration: none;
 }
+#celsius_link {
+  text-decoration: none;
+}
+.weather_temperature .active {
+  color: #ffffff;
+  cursor: default;
+}
+.weather_temperature .active:hover {
+  text-decoration: none;
+}
+
 .weather_sunrise {
   font-size: 20px;
   padding: 15px 10px;
@@ -157,4 +166,7 @@ button {
   min-width: 60px;
   width: calc(10% - 10px);
   flex-grow: 1;
+}
+.footer em {
+  color: black;
 }

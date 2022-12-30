@@ -47,17 +47,16 @@ function changeToCelsius(event) {
   let temp = document.querySelector(".temperature");
   temp.innerHTML = 19;
 }
-let fahrenheit = document.querySelector("#fahrenheit");
+let fahrenheit = document.querySelector("#fahrenheit_link");
 fahrenheit.addEventListener("click", changeToFahrenheit);
 
-let celsius = document.querySelector("#celsius");
+let celsius = document.querySelector("#celsius_link");
 celsius.addEventListener("click", changeToCelsius);
 
 function displayWeather(response) {
   document.querySelector(".weather_city").innerHTML = response.data.name;
-  document.querySelector(".temperature").innerHTML = Math.round(
-    response.data.main.temp
-  );
+  document.querySelector(".temperature").innerHTML =
+    Math.round(celsiusTemperature);
   document.querySelector(".weather_description").innerHTML =
     response.data.weather[0].description;
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
@@ -70,6 +69,8 @@ function displayWeather(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
+
+  celsiusTemperature = response.data.main.temp;
 }
 
 function getCurrentTemp(city) {
@@ -93,11 +94,33 @@ function currentLocation(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(getPosition);
 }
+function displayfahrenheitTemperature(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector(".temperature");
+  celsiusLink.classList.remove(".active");
+  fahrenheitlink.classList.add(".active");
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+}
+function displaycelsiusTemperature(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector(".temperature");
+  celsiusLink.classList.add(".active");
+  fahrenheitlink.classList.remove(".active");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
+let celsiusTemperature = null;
 
 let searchForm = document.querySelector(".search_form");
 searchForm.addEventListener("submit", search);
 
 let button = document.querySelector("button");
 button.addEventListener("click", currentLocation);
+
+let fahrenheitlink = document.querySelector("#fahrenheit_link");
+fahrenheitlink.addEventListener("click", displayfahrenheitTemperature);
+
+let celsiusLink = document.querySelector("#celsius_link");
+celsiusLink.addEventListener("click", displaycelsiusTemperature);
 
 getCurrentTemp("Harare");
