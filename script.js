@@ -67,11 +67,12 @@ function displayWeather(response) {
   document.querySelector("#precipitation").innerHTML =
     response.data.precipitation.inches;
 
-  let iconElement = document.querySelector(".weather_image");
-  iconElement.setAttribute(
-    "src",
-    `http://openweathermap.org/img/wn/${response.data.weather[0].image}@2x.png`
-  );
+  document
+    .querySelector("#weather_image")
+    .setAttribute(
+      "src",
+      `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    );
 }
 
 function getCurrentTemp(city) {
