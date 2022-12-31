@@ -5,10 +5,10 @@ body {
   margin: 0;
   background-image: radial-gradient(
     circle,
-    #829ef3 10%,
-    #72a4f4 28%,
-    #7575f3 32%,
-    #6a89e4 100%
+    #6600ff 0%,
+    #0066ff 25%,
+    #3333ff 32%,
+    #3366ff 100%
   );
   padding: 10px 10px;
   color: #ffffff;
@@ -152,11 +152,16 @@ button {
 }
 .weather_forecast_day {
   font-size: 18px;
+  color: rgb(240, 173, 91);
 }
 .weather_forecast_temperature {
   font-size: 15px;
   font-weight: bold;
 }
+.weather_forecast_temperature_min {
+  opacity: 0.5;
+}
+
 .weather_forecast_item {
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 10px;
