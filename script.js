@@ -53,6 +53,38 @@ fahrenheit.addEventListener("click", changeToFahrenheit);
 let celsius = document.querySelector("#celsius_link");
 celsius.addEventListener("click", changeToCelsius);
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let days = [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+    "Sunday",
+  ];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+      <div class="col">
+      <article class="weather_forecast_item">
+        <h3 class="weather_forecast_day">${day}</h3>
+        <img src="images/rainy.png" alt="Rain" class="weather_forecast_icon">
+        <p class= "weather_forecast_temperature"><span class="weather_forecast_temperature_max">78</span>
+        <span class="weather_forecast_temperature_min"> / 50</span></p>
+      </article>
+      </div>
+      `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function displayWeather(response) {
   document.querySelector(".weather_city").innerHTML = response.data.name;
   document.querySelector(".temperature").innerHTML =
@@ -72,6 +104,8 @@ function displayWeather(response) {
 
   celsiusTemperature = response.data.main.temp;
 }
+
+displayForecast();
 
 function getCurrentTemp(city) {
   let apiKey = "d6c19fbec4ecf72cd2eb049393d9e359";
