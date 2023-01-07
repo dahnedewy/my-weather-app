@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
 body {
   width: 100%;
-  min-height: 80vh;
+  min-height: 100vh;
   margin: 0;
   background-image: radial-gradient(
     circle,
@@ -23,11 +23,13 @@ h2 {
 }
 .weather {
   border: 1px solid black;
-  max-width: 1000px;
-  margin: 30px auto;
-  padding: 20px;
-  border-radius: 5px;
-  box-sizing: content-box;
+  max-width: 300px auto;
+  margin: 30px;
+  margin-top: auto;
+  padding: 10px 20px 20px 20px;
+  border-radius: 10px;
+  height: 100%;
+  box-sizing: border-box;
 }
 
 .search_form {
@@ -151,31 +153,45 @@ button {
   position: relative;
   top: -25px;
 }
+.weather_forecast ul {
+  position: relative;
+  margin-bottom: 30px;
+}
 .weather_forecast_icon {
   max-width: 50%;
 }
 .weather_forecast_day {
-  font-size: 18px;
-  color: rgb(240, 173, 91);
+  width: 200px;
+  height: 200px;
+  padding: 0;
+  border-radius: 30px;
+  color: rgb(58, 75, 253);
 }
 .weather_forecast_temperature {
   font-size: 15px;
   font-weight: bold;
+  padding: 15px;
 }
 .weather_forecast_temperature_min {
   opacity: 0.5;
 }
 
 .weather_forecast_item {
-  background-color: rgba(255, 255, 255, 0.2);
-  border-radius: 20px;
-  margin: 0 10px 10px;
-  padding: 30px 5px 20px;
-  min-width: 100px;
-  width: calc(10% - 10px);
-  flex-grow: 10px;
+  list-style: none;
+  padding: 0;
+  text-align: center;
+  justify-content: space-between;
 }
-footer {
+.weather_forecast_item li {
+  display: inline-block;
+  margin: 0 0.5em;
+  min-width: 5em;
+  margin-bottom: -100px;
+}
+
+.footer {
   align-content: center;
   justify-content: center;
+  text-align: center;
+  margin-top: -30px;
 }
