@@ -23,13 +23,11 @@ h2 {
 }
 .weather {
   border: 1px solid black;
-  max-width: 300px auto;
-  margin: 30px;
-  margin-top: auto;
-  padding: 10px 20px 20px 20px;
-  border-radius: 10px;
+  min-width: fit-content;
   height: 100%;
-  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 10px 20px 20px 10px;
+  border-radius: 10px;
 }
 
 .search_form {
@@ -152,6 +150,7 @@ button {
   justify-content: space-between;
   position: relative;
   top: -25px;
+  border: 1px blue;
 }
 .weather_forecast ul {
   position: relative;
@@ -176,17 +175,19 @@ button {
   opacity: 0.5;
 }
 
-.weather_forecast_item {
+li {
+  display: block;
+  margin: 0 0.5em;
+  min-width: 5em;
+  margin-bottom: -100px;
+  border: 1px blue;
+  border-radius: 30px;
+}
+#forecast {
   list-style: none;
   padding: 0;
   text-align: center;
   justify-content: space-between;
-}
-.weather_forecast_item li {
-  display: inline-block;
-  margin: 0 0.5em;
-  min-width: 5em;
-  margin-bottom: -100px;
 }
 
 .footer {

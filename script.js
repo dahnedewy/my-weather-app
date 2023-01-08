@@ -69,27 +69,28 @@ celsius.addEventListener("click", changeToCelsius);
 
 function displayForecast(response) {
   let forecast = response.data.daily;
-  let forecastElement = document.querySelector("weather_forecast_item");
-  let forecastHTML = `<ul class="weather_forecast_item">`;
-  forecast.forEach(function (forecastDay) {
-    forecastHTML +
-      `<li class="weather_forecast_day">
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = ``;
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 5) {
+      forecastHTML += `<li class="weather_forecast_day">
         ${formatDay(forecastDay.dt)}
         <img src="http://openweathermap.org/img/wn/${
           forecastDay.weather[0].icon
         }@2x.png>"
+        
         <span class="weather_forecast_temperature_max">${Math.round(
           forecastDay.temp.max
-        )}°</span>
+        )}°/</span>
         <span class="weather_forecast_temperature_min">${Math.round(
           forecastDay.temp.min
-        )} / °</span>
+        )}°</span>
       </li>
   
       `;
+    }
   });
 
-  forecastHTML = forecastHTML + `</ul>`;
   forecastElement.innerHTML = forecastHTML;
 }
 function getForecast(coordinates) {
