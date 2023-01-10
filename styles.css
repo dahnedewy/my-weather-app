@@ -27,7 +27,7 @@ h2 {
   height: 600px;
   margin: 30px auto;
   padding: 10px 20px 20px 20px;
-  border-radius: 10px;
+  border-radius: 35px;
   margin-top: auto;
   box-sizing: content-box;
 }
@@ -170,7 +170,7 @@ button {
   height: 200px;
   padding: 10px 10px 20px 10px;
   border-radius: 5px;
-  color: rgb(58, 75, 253);
+  color: rgb(18, 27, 4);
 }
 .weather_forecast_temperature {
   font-size: 15px;
