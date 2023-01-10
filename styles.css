@@ -23,11 +23,13 @@ h2 {
 }
 .weather {
   border: 1px solid black;
-  min-width: fit-content;
-  height: 100%;
-  margin: 0 auto;
-  padding: 10px 20px 20px 10px;
+  max-width: 600px auto;
+  height: 600px;
+  margin: 30px auto;
+  padding: 10px 20px 20px 20px;
   border-radius: 10px;
+  margin-top: auto;
+  box-sizing: content-box;
 }
 
 .search_form {
@@ -152,18 +154,22 @@ button {
   top: -25px;
   border: 1px blue;
 }
-.weather_forecast ul {
-  position: relative;
-  margin-bottom: 30px;
+.weather_forecast_item {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+  justify-content: space-between;
 }
 .weather_forecast_icon {
-  max-width: 50%;
+  display: block;
+  width: 80px;
+  height: 70px;
 }
 .weather_forecast_day {
-  width: 200px;
+  width: 180px;
   height: 200px;
-  padding: 0;
-  border-radius: 30px;
+  padding: 10px 10px 20px 10px;
+  border-radius: 5px;
   color: rgb(58, 75, 253);
 }
 .weather_forecast_temperature {
@@ -175,14 +181,6 @@ button {
   opacity: 0.5;
 }
 
-li {
-  display: block;
-  margin: 0 0.5em;
-  min-width: 5em;
-  margin-bottom: -100px;
-  border: 1px blue;
-  border-radius: 30px;
-}
 #forecast {
   list-style: none;
   padding: 0;

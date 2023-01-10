@@ -73,11 +73,11 @@ function displayForecast(response) {
   let forecastHTML = ``;
   forecast.forEach(function (forecastDay, index) {
     if (index < 5) {
-      forecastHTML += `<li class="weather_forecast_day">
+      forecastHTML += `<li class="weather_forecast_day"><br />
         ${formatDay(forecastDay.dt)}
         <img src="http://openweathermap.org/img/wn/${
           forecastDay.weather[0].icon
-        }@2x.png>"
+        }@2x.png"><br />
         
         <span class="weather_forecast_temperature_max">${Math.round(
           forecastDay.temp.max
@@ -113,7 +113,7 @@ function displayWeather(response) {
   let iconElement = document.querySelector(".weather_image");
   iconElement.setAttribute(
     "src",
-    `https://openweathermap.org/image/wn/${response.data.weather[0].icon}@2x.png`
+    `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
 
   iconElement.setAttribute("alt", response.data.weather[0].description);
