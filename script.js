@@ -143,7 +143,7 @@ function currentLocation(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(getPosition);
 }
-function displayfahrenheitTemperature(event) {
+function displayFahrenheitTemperature(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector(".temperature");
   celsiusLink.classList.remove(".active");
@@ -151,7 +151,7 @@ function displayfahrenheitTemperature(event) {
   let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
   temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
-function displaycelsiusTemperature(event) {
+function displayCelsiusTemperature(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector(".temperature");
   celsiusLink.classList.add(".active");
@@ -166,9 +166,9 @@ let button = document.querySelector("button");
 button.addEventListener("click", currentLocation);
 
 let fahrenheitlink = document.querySelector("#fahrenheit_link");
-fahrenheitlink.addEventListener("click", displayfahrenheitTemperature);
+fahrenheitlink.addEventListener("click", displayFahrenheitTemperature);
 
 let celsiusLink = document.querySelector("#celsius_link");
-celsiusLink.addEventListener("click", displaycelsiusTemperature);
+celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 getCurrentTemp("Dallas");
