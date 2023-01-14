@@ -101,6 +101,7 @@ function getForecast(coordinates) {
 
 function displayWeather(response) {
   document.querySelector(".weather_city").innerHTML = response.data.name;
+  celsiusTemperature = response.data.main.temp;
   document.querySelector(".temperature").innerHTML =
     Math.round(celsiusTemperature);
   document.querySelector(".weather_description").innerHTML =
@@ -117,8 +118,6 @@ function displayWeather(response) {
   );
 
   iconElement.setAttribute("alt", response.data.weather[0].description);
-
-  celsiusTemperature = response.data.main.temp;
 
   getForecast(response.data.coord);
 }
